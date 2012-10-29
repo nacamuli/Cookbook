@@ -1,0 +1,57 @@
+*{
+margin:0;
+padding:0;
+border:0;	
+}
+
+
+
+html,body{
+	height:100%;
+}
+
+#holder{
+height:100%;
+	width:100%;
+
+}
+
+#wheels{
+	width:50%;
+	height:100%;
+	background-color:#877979;
+	float: left;
+}
+
+#display{
+	width:50%;
+	height:100%;
+	background-color:#A2A1BF;
+		float: left;
+}
+
+.wheel{
+float: left;
+	width:33%;
+	height:100%;
+	background-color:green;
+	overflow:auto;
+	border: 0px solid black;
+	-webkit-overflow-scrolling: touch;
+}
+
+#w0{
+	background-color: #BFB0B0;
+	width:34%;
+}
+#w1{
+	background-color: #C0BEB1;
+}
+#w2{
+	background-color: #DAEDD9;
+}
+
+img{
+	width:100%;
+	
+}

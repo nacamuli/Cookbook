@@ -3,11 +3,14 @@
 
 html, body {
 	height:100%;
+	background-color:#dddddd;
 }
+
 * {
 	padding:0;
 	margin:0;
 	border:0;
+	font-family:Arial, Helvetica, sans-serif;
 }
 body {
 
@@ -26,10 +29,9 @@ body {
 	float:left;
 	width:3072px;
 	height:100%;
-	font-size:2em;
 	-webkit-transform:translate3d(0, 0, 0);
 }
-.recipe {
+.panel {
 	/**
 	Pagr is one of the panels
 	**/
@@ -44,8 +46,7 @@ body {
 }
 
 
-.recipe#first{
-}
+
 
  @media only screen and (orientation: landscape) {
 #wrapper2way {
@@ -92,8 +93,13 @@ li {
 }
 
 #wrapper1 li{
-height:99px;
-width:99px;
-background:#900;
-margin:1px;
+height:100px;
+width:100px;
+backgournd-color:#ff0000;
+border:solid #903;
+color:#FFFFFF;
+background-image:url(../img/star.svg);
+padding-top:70px;
+ -webkit-box-sizing:border-box;
+ font-size:0.4em;
 }

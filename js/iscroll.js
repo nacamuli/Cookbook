@@ -238,7 +238,7 @@ iScroll.prototype = {
 		}
 
 		if (!that[dir + 'ScrollbarWrapper']) {
-			// Create the scrollbar wrapper
+			// Create the scrollbar wrapper  
 			bar = doc.createElement('div');
 
 			if (that.options.scrollbarClass) bar.className = that.options.scrollbarClass + dir.toUpperCase();
@@ -488,10 +488,12 @@ iScroll.prototype = {
 		}
 		
 		if (that.options.onScrollMove) that.options.onScrollMove.call(that, e);
-		moving(that);
+		//moving(that);
 	},
 	
 	_end: function (e) {
+			//console.log('iScroll end');
+		//	moved(that);
 		if (hasTouch && e.touches.length !== 0) return;
 
 		var that = this,
@@ -622,6 +624,8 @@ iScroll.prototype = {
 
 		that._resetPos(200);
 		if (that.options.onTouchEnd) that.options.onTouchEnd.call(that, e);
+		
+		
 	},
 	
 	_resetPos: function (time) {

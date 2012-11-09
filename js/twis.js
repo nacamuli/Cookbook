@@ -258,6 +258,12 @@ TWIS.prototype = {
 		}
 
 		that.moved = true;
+		
+		/**
+		Daniel:
+		Disable vertical scroll on the first panel
+		**/
+		
 		if(that.currentPage>0){
 		that._pos(newX, newY);
 		}else{
@@ -276,7 +282,7 @@ TWIS.prototype = {
 	},
 	
 	_end: function (e) {
-					console.log('end');
+					console.log('twis end');
 		if (hasTouch && e.touches.length != 0) return;
 
 		var that = this,

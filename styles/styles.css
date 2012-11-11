@@ -21,6 +21,7 @@ body {
 	top:0px;
 	bottom:0;
 	width:320px;
+	
 	overflow:hidden;
 }
 #slider2way {
@@ -28,7 +29,7 @@ body {
 	z-index:1;
 	float:left;
 	width:3072px;
-	height:100%;
+	
 	-webkit-transform:translate3d(0, 0, 0);
 }
 .panel {
@@ -82,7 +83,7 @@ top:-4px;
 }
 .wrapper {
 	position:absolute;
-	height:360px;
+	height:460px;
 	top:0px;
 	bottom:0px;
 	width:33%;

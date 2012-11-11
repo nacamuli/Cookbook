@@ -264,7 +264,7 @@ TWIS.prototype = {
 		Disable vertical scroll on the first panel
 		**/
 		
-		if(that.currentPage>0){
+		if(that.currentPage>0&&that.currentPage<4){
 		that._pos(newX, newY);
 		}else{
 		that._pos(newX, 0);	
@@ -338,6 +338,9 @@ TWIS.prototype = {
 //			newPosX = newPosX >= 0 ? 0 : newPosX < that.maxScrollX ? that.maxScrollX : newPosX;
 
 			that.scrollTo(newPosX, that.y, 400);
+
+//Daniel
+//	currentPanel=that.currentPage;
 
 			if (that.options.onTouchEnd) that.options.onTouchEnd.call(that, e);
 			return;
@@ -520,7 +523,7 @@ TWIS.prototype = {
 	 */
 	changeTarget: function (target) {
 		var that = this, matrix;
-console.log('changetarget');
+
 		if (that.scroller) {
 			that.stop();
 			that.refresh();

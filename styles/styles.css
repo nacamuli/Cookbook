@@ -3,7 +3,7 @@
 
 html, body {
 	height:100%;
-	background-color:#dddddd;
+	background-color:#ffffff;
 }
 
 * {
@@ -41,10 +41,31 @@ body {
 	display:block;
 	float:left;
 	width:320px;
-	padding:1em;
+	padding:1px;
 	-webkit-transform:translate3d(0, 0, 0);
 }
 
+/**
+Recipe
+**/
+
+
+.recipe img{	
+	position:relative;
+}
+.story{
+top:-2684px;	
+}
+
+
+.cover{
+top:0px;	
+}
+
+
+.instructions{
+top:-4px;	
+}
 
 
 
@@ -67,23 +88,17 @@ body {
 	width:33%;
 	overflow:auto;
 }
-#wrapper1 {
+#wrapper1,#wrapper4 {
 	left:0;
 }
-#wrapper2 {
+#wrapper2,#wrapper5 {
 	left:33%;
 }
-#wrapper3 {
+#wrapper3,#wrapper6 {
 	left:66%;
 
 }
-#scroller, #scroller2, #scroller3 {
-	position:absolute;
-	z-index:1;
-	
-	width:100%;
-	padding:0;
-}
+
 ul {
 	list-style:none;
 	width:100%;
@@ -92,14 +107,13 @@ li {
 	width:100%;
 }
 
-#wrapper1 li{
-height:100px;
-width:100px;
+.wrapper li{
+
+width:100%;
 backgournd-color:#ff0000;
-border:solid #903;
-color:#FFFFFF;
-background-image:url(../img/star.svg);
-padding-top:70px;
+
+
+background-size:100%;
  -webkit-box-sizing:border-box;
  font-size:0.4em;
 }

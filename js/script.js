@@ -1,47 +1,63 @@
 // JavaScript Document
 
 //LAteral panel scroller
-var my2way;
-
+var twisScroller;
+var currentPanel=0;
 //Roulette scrollers
-var myScroll;
-var myScroll2;
-var myScroll3;
+var iscroller1,iscroller2,iscroller3,iscroller4,iscroller5,iscroller6;
 
 //Y Position of roulette strip
 var ypos;
 
-
+var strips = new Array();
 
 
 function loaded() {
-//Initiate scrollers
-	//2 Way scroller (have mofifed line 265 to disable vertical scrolling on the first panel)
-	my2way = new TWIS('#wrapper2way');
-	myScroll = new iScroll('wrapper1',{
-		vScrollbar: false,bounce:false,snap: 'li', 
-	onScrollMove: function() {moving();}, 
-		onScrollEnd: function() {ended();},
-	 });
-    myScroll2 = new iScroll('wrapper2',{vScrollbar: false,bounce:false,snap: 'li' });
-    myScroll3 = new iScroll('wrapper3',{vScrollbar: false,bounce:false,snap: 'li' });
+	makeScrollers();
+	initButtons();
+	
+}
 
-
-/*
-	// Test scrollY and scrollTorecipe
-	setTimeout(function () {
-		myScroll.scrollTorecipe(3, 500);
-	}, 1000);
-
-	setTimeout(function () {
-		myScroll.scrollY(-1000, 1500);
-	}, 2000);
-*/
-
-	// Free some mem
+function makeScrollers(){
+	populateRouletteStrips();
+	twisScroller = new TWIS('#wrapper2way',{bounce:true});
+	iscroller1 = new iScroll('wrapper1',{vScrollbar: false,bounce:false,snap: 'li' });
+	iscroller2 = new iScroll('wrapper2',{vScrollbar: false,bounce:false,snap: 'li' });
+    iscroller3 = new iScroll('wrapper3',{vScrollbar: false,bounce:false,snap: 'li' });
+	iscroller4 = new iScroll('wrapper4',{vScrollbar: false,bounce:false,snap: 'li' });
+	iscroller5 = new iScroll('wrapper5',{vScrollbar: false,bounce:false,snap: 'li' });
+	iscroller6 = new iScroll('wrapper6',{vScrollbar: false,bounce:false,snap: 'li' });	
 	window.removeEventListener('load', loaded, false);
 }
 
+
+function populateRouletteStrips(){
+	strips[0]=$('#wrapper1 ul');
+	strips[1]=$('#wrapper2 ul');
+	strips[2]=$('#wrapper3 ul');
+	for(i=0;i<3;i++){
+		for(j=0;j<20;j++){
+			$(strips[i]).append('<li></li>');	
+			var li='#wrapper'+(i+1)+' ul li:last';
+			$(li).css({'height':$(li).width()+'px'});
+			$(li).css('background-image','url(img/icons/Icon-'+Math.floor(Math.random()*5)+'.svg)');
+			
+			
+		}
+	}
+	$('#wrapper1 .scroller').clone().appendTo('#roulette2 #wrapper4');
+	$('#wrapper2 .scroller').clone().appendTo('#roulette2 #wrapper5');
+	$('#wrapper3 .scroller').clone().appendTo('#roulette2 #wrapper6');
+}
+
+
+function initButtons(){
+	
+	}
+
+function storyUp(){
+console.log("story up");	
+}
 
 /**
 Get y pos of a roulette
